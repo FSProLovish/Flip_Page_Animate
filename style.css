@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rampart One', cursive;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e0e4ee;
+    perspective: 1000px;
+}
+.book{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.book:hover .cover{
+    transform: rotateX(10deg) rotateY(-180deg);
+}
+.book:hover .page{
+    transform: rotateX(10deg) rotateY(-180deg);
+    z-index: 2;
+}
+
+
+
+.cover,
+.back_cover{
+    position: absolute;
+    height: 27rem;
+    width: 20rem;
+    background-color: #343755;
+    border-radius: 2px 20px 20px 2px;
+    box-shadow: 1px 1px 10px gray;
+    transform: rotateX(10deg);
+    transform-origin: center left;
+}
+.cover{
+    z-index: 1;
+    transition: all 3s;
+   
+  
+
+}
+.back_cover img,.cover img{
+    border-radius: 2px 20px 20px 2px;
+    height: 100%;
+    width: 99%;
+}
+.back_cover{
+    z-index: -2;
+}
+
+.page,
+.last-page{
+    height: 26rem;
+    width: 19.6rem;
+    position: absolute;
+    background-color: white;
+    border-radius: 2px 20px 20px 2px;
+    transform-origin: center left;
+    transform: rotateX(10deg);
+    z-index: -1;
+    
+}
+.page:nth-child(2){
+    transition-duration: 3s;
+}
+.page:nth-child(3){
+    transition-duration: 2.6s;
+}
+.page:nth-child(4){
+    transition-duration: 2.2s;
+}
+.page:nth-child(5){
+    transition-duration: 1.8s;
+    
+}
+.page:nth-child(6){
+    transition-duration: 1.4s;
+}
+.book:hover .page:nth-child(2){
+    transition-duration: 6s;
+    
+   
+}
+.book:hover .page:nth-child(3){
+    transition-duration: 5.6s;
+    
+   
+}
+.book:hover .page:nth-child(4){
+    transition-duration: 5.2s;
+    
+   
+}
+.book:hover .page:nth-child(5){
+    transition-duration: 4.8s;
+    
+   
+}
+.book:hover .page:nth-child(6){
+    transition-duration: 4.4s;
+    
+
+}
+.last-page h2{
+    text-align: center;
+    font-size: 1.2em ;
+}
+.o2{
+    background: url(https://picturedensity.com/wp-content/uploads/2019/06/Basic-style-for-book-cover-page.jpg);
+   
+    background-repeat: no-repeat;
+
+}
+.o3{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYjL505soDmzVIjwkFQV2NkVxydDAvDpTs7A&usqp=CAU);
+   
+}
+.o4{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEgJnLJ0AlYp-spkhDZg5loD5jMXyX7_52VrSlI6QNv4lMd1MoEgHNlHFYU1tpJh0ZZxM&usqp=CAU);
+   
+}
+.o5{
+ background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmGYnw5vX6z1dSewri3dq2zhAzz56fCPbDVA&usqp=CAU);
+
+}
+
+.last-page img{
+    position: relative;
+    
+    height: 100%;
+    width: 100%;
+   
+    z-index: -1;
+}
